@@ -1,4 +1,10 @@
-Repro with `cargo run --verbose`
+Repro with
+1) Add some rustflags to your ~/.cargo/config.toml eg
+```
+[target.aarch64-apple-darwin]
+rustflags = ["-C", "link-arg=-fuse-ld=/Users/nipunn/src/sold/build/ld64"]
+```
+2) `cargo run --verbose`
 
 You see that cargo gives
 ```
